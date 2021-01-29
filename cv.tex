@@ -1,0 +1,168 @@
+%-------------------------
+% Resume in Latex
+% Author : Juan Valdivia
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeItemSimple}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/jsmvaldivia}{\Large Juan Sebastián Mederos Valdivia}} & Email : \href{mailto:jsmederos@gmail.com}{jsmederos@gmail.com}\\
+  \href{https://www.linkedin.com/in/juan-valdivia/}{https://www.linkedin.com/in/juan-valdivia/} & Mobile : +351 968 640 681\\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carlsberg Group}{Lisbon, Portugal}
+      {Software Developer}{Jan 2019 -- Present}
+      \resumeItemListStart
+        \resumeItem{Cadi}
+          {Cadi is a Carberg Group web application inserted in a new set of customer experience tools intended for sales representatives.
+          I have built, along with a diverse team, a series of  back end Java and Typescript micro-services from scratch to support this app as well as core functionality for geolocation enrichment services, surveys and ecommerce fuctionality among others. }
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {STEF-IT}{Lisbon, Portugal}
+      {Software Developer}{Oct 2017 -- Dec 2018}
+      
+    \small{Project for French company specialized in cold chain transportation and logistics supporting STEF employees and clients on day to day operations. I was responsible for: }
+      \resumeItemListStart
+        \resumeItemSimple
+          {Corrective maintenance of bug fixes. Building greater test coverage and resolving underlying issues.}
+        \resumeItemSimple
+          {Supporting upgrades on services on a SOA platform (tools and language versioning).}
+        \resumeItemSimple
+          {Taking under my responsibility new younger developers while on-boarding them to the project.}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {TIMWE Group}{Lisbon, Portugal}
+      {Software Developer}{Aug 2016 -- Aug 2017}
+      \resumeItemListStart
+        \resumeItem{VAS\footnote{Value Added Services} platform installation}
+          {Worked with developers, operational and non-technical teams to ensure the installation and deployment of TIMWE’s platform within major telecommunication carriers around the world. I was also responsible for custom integration for external billing and customer services with those same mobile carriers using Java related technologies.}
+        \resumeItem{Back Office for mobile VAS platform}
+          {Java back end for a web application used to speed up on-boarding process for new carriers and partners to mobile subscription services. This allowed TIMWE, the carriers and the product partners to configure keywords and SMS messages for end users while using the subscribed products.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Side Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Novabase GTE DevOps Learning}
+      {During the STEF-IT project, I worked with a colleague to investigate in our consultancy, Novabase, and understand what are the success factors for promoting a DevOps culture. Interviewed success cases within the company. Reading papers, articles and books helped us form our ideas.}
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \resumeItemSimple
+      {\textbf{Programming Languages}: Java, SQL, Typescript}
+    \resumeItemSimple
+      {\textbf{Used Libraries and Frameworks}: JUnit, Mockito, Apache Camel, TestContainers, Spring Boot stack, GWT, Jersey, HK2 among others, Node, Apollo Graphql}
+    \resumeItemSimple
+      {\textbf{Other tools and services}: AWS (ECS, Lambda Functions), Redis, RabbitMQ, JMS Active MQ, ElasticSearch}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education and others}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ISCTE - University Intitute of Lisbon}{Lisbon, Portugal}
+      {Computer Engineering}{2011 -- 2015}
+    \resumeItemSimple
+      {Portuguese and Spanish with native proficiency and English and French with professional proficiency.}
+  \resumeSubHeadingListEnd
+  
+%-----------ABOUT ME-----------------  
+\section{About me}
+  \small{I love building applications in a collaborative manner and I love the feeling of being proud about what was built.\newline
+  Some of the technical books that so far made a greater impression on me were Effective Java by Joshua Bloch for its simplicity, Clean Code by Uncle Bob and Software Craftsman by Sandro Mancuso. Currently, I am currently reading and learning Haskell with Get Programming Haskell by Will Kurt.
+  Before the pandemic, I'd usually attend meetups for the Lisbon JUG (Java User Group) and the newly formed Software Craftsmanship Community in Lisbon. I always checkout the VJUG talks as they're great for awareness.
+  Out of this environment, I am learning how to surf and try to do some photography.
+  \newline
+  This resume was written using \LaTeX
+  }
+%-------------------------------------------
+\end{document}
