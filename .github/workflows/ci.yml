@@ -9,6 +9,7 @@ on:
 
 jobs:
   build-cv:
+    if: (github.event.pusher.name == github.event.repository.owner.name)
     name: Build CV
     runs-on: ubuntu-latest
 
@@ -27,5 +28,6 @@ jobs:
          name: PDF
          path: cv.pdf
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          
          
