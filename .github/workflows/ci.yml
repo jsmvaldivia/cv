@@ -9,6 +9,7 @@ on:
 
 jobs:
   build-cv:
+    name: Build CV
     runs-on: ubuntu-latest
 
     steps:
