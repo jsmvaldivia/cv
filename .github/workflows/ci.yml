@@ -26,4 +26,6 @@ jobs:
         with:
          name: PDF
          path: cv.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
          
