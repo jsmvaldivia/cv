@@ -14,12 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Remove previous version
+        run: |
+          rm -rf cv.pdf
+          
       - name: Latex to PDF
         uses: xu-cheng/latex-action@v2
         with:
          root_file: |
            cv.tex
-
+      
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -27,7 +31,7 @@ jobs:
          path: cv.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          
+      
       - name: New Version
         run: |
           git config user.email "juan.valdivia@carlsberggroup.com"
