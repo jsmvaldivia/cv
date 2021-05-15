@@ -23,21 +23,77 @@
 
 \input{structure.tex} % Include the file specifying document layout and packages
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION 
-%----------------------------------------------------------------------------------------
-
 \userinformation{
-
 \begin{flushright}
-
 \footnotesize % Smaller font size
 \url{jsmvaldivia@gmail.com} \\ % Your email address
 \url{www.linkedin.com/in/juan-valdivia/} \\ % Your URL
-(+351) 968 640 681 \\ % Your phone number
-
-\end{flushright}
+\footnotesize (+351) 968 640 681 \\ % Your phone number
 \Sep
+\end{flushright}
+
+\aboutme{\footnotesize About Me}
+{\footnotesize
+I am a quality driven software engineer 
+that rejoices on making 
+people's life easier by 
+building simple and elegant software.
+I keep up to date by 
+attending software 
+meetups (Lisbon JUG, the 
+Virtual JUG and the
+Software Craftsmanship
+Community in Lisbon). I also pickup technical reads. I am curious and love connecting pieces of knowledge.}
+\Sep
+\CVSection{Skills}
+
+%------------------------------------------------
+
+\CVItem{Programming languages}
+{\begin{tabular}{p{0.2\textwidth}}
+\smallBlueBullet Java \\
+\smallBlueBullet Typescript\\
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Software}
+{\begin{tabular}{p{0.2\textwidth}}
+ \smallBlueBullet JUnit and Mockito \\ 
+ \smallBlueBullet TestContainers \\ 
+ \smallBlueBullet Docker \\
+ \smallBlueBullet SpringBoot \\
+ \smallBlueBullet NodeJs \\ 
+ \smallBlueBullet Apollo Graphql \\ 
+ \smallBlueBullet AWS \\
+ \smallBlueBullet Kakfka \\
+\end{tabular}}
+
+%------------------------------------------------
+
+\CVItem{Spoken languages}{
+\begin{tabular}{p{0.2\textwidth}}
+    \smallBlueBullet \textit{Portuguese} Native\\ 
+    \smallBlueBullet \textit{Spanish} Native\\
+    \smallBlueBullet \textit{English} (C2 level)\\ 
+    \smallBlueBullet \textit{French} (C1 level)\\ 
+\end{tabular}}
+
+\Sep
+
+\CVSection{Interests}
+
+%------------------------------------------------
+
+\CVItem{Professional}{Software quality, TDD, Software design, Domain Specific Languages, Functional Languages}
+
+%------------------------------------------------
+
+\CVItem{Personal}{ 
+ I like hiking, I do some amateur photography and I collect and cherish coins from different times and places. I am also learning how to surf
+}
+
+
 \vfill
 
 }
@@ -50,50 +106,25 @@
 
 \framebreak % End of the first column
 
-%----------------------------------------------------------------------------------------
-%	HEADING
-%----------------------------------------------------------------------------------------
-
 \cvheading{Juan Valdivia} 
-
 \cvsubheading{Software Engineer}
 
-%----------------------------------------------------------------------------------------
-%	ABOUT ME
-%----------------------------------------------------------------------------------------
-
-\aboutme{About Me}{I am a quality driven software engineer that rejoices on making people's life easier by building simple and elegant software. I keep up to date by attending software meetups (Lisbon JUG,  the Virtual JUG and the Software Craftsmanship Community in Lisbon). I also pickup technical reads. I am curious and love connecting pieces of knowledge.}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
 \CVSection{Education}
-
 %------------------------------------------------
-
 \CVItem{2011 -2015, ISCTE-University Intitute of Lisbon}{BS in Computer Science and some MS in Computer Science classes}
-
-%------------------------------------------------
 
 \Sep % Extra whitespace after the end of a major section
 
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-
 \CVSection{Experience}
-
 %------------------------------------------------
-
 \CVItem{Jan 2019 - present, \textit{Software Engineer}, Carlsberg Group}{
 Cadi is a sales force application for several countries
 \begin{itemize}
 	\item Built and lauched Cadi to 7 different European markets with a small multi functional team
 	\item Laid down and documented ground rules for development practices
-	\item Improved the overall project delivery by adding extensive integration tests 
-    \item Solutions design and development for several micro-services 
-    \item Built new version of CI/CD pipelines using Github actions
+	\item By adding extensive integration tests, improved the overall project delivery also reducing unresolved bugs by an average 50\%
+    \item Solutions design and development for several micro-services and integration with in-house built e-commerce platform
+    \item Built new version of CI/CD pipelines using Github actions.
 \end{itemize}
 }
 
@@ -114,61 +145,14 @@ Worked on middle-ware to enhance mobile carriers and content partners capabiliti
 \begin{itemize}
 	\item Built back-office for mobile VAS\footnote{Value Added Services} runtime and did custom integrations to different AAA\footnote{Authorization,Authentication,Accounting} services.
 	\item Successfully migrated over 750K users from 6 different countries to work in the new platform.
+	\item Highly involved with clients to gather and discuss business and technical requirements
 
 \end{itemize}
 }
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-
-\CVSection{Skills}
-
-%------------------------------------------------
-
-\CVItem{Programming languages}
-{\begin{tabular}{p{0.18\textwidth} p{0.18\textwidth} p{0.18\textwidth}}
-\bluebullet Java &  \bluebullet Typescript\\
-\end{tabular}}
-
-%------------------------------------------------
-
-\CVItem{Software}
-{\begin{tabular}{p{0.18\textwidth} p{0.18\textwidth} p{0.18\textwidth} p{0.18\textwidth}}
- \bluebullet JUnit and Mockito &  \bluebullet TestContainers & \bluebullet Docker & \bluebullet SpringBoot \\
- \bluebullet NodeJs & \bluebullet Apollo Graphql & \bluebullet AWS & \bluebullet Kakfka
-\end{tabular}}
-
-%------------------------------------------------
-
-\CVItem{Spoken languages}{
-\begin{tabular}{p{0.5\textwidth}}
-    \bluebullet \textit{Portuguese} and \textit{Spanish} native \\
-    \bluebullet \textit{English} C2 level, Cambridge English CPE exam \\ 
-    \bluebullet \textit{French} professional level \\ 
-\end{tabular}}
 
 %------------------------------------------------
 
 \Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
-%	NEW PAGE DELIMITER
-%	Place this block wherever you would like the content of your CV to go onto the next page
-%----------------------------------------------------------------------------------------
-
-\clearpage % Start a new page
-
-\userinformation % Print your information in the left column
-
-\framebreak % End of the first column
-
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
 
 \CVSection{Side Projects}
 
@@ -179,31 +163,5 @@ Worked on middle-ware to enhance mobile carriers and content partners capabiliti
 \CVItem{2018, \textit{STEF-IT}, 24h Hackathon}{Awarded first place. Demo application in Javascript that tackled workplace safety education practices around STEF-IT trucks, lifts and warehouses }
 
 \CVItem{2018, \textit{Novabase GTE (now Axians)}, DevOps Learning}{Investigated and fostered environment for DevOps culture. Interviewed success and shared cases within the company. Collected articles and books that helped us form this internal community. }
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS
-%----------------------------------------------------------------------------------------
-
-\CVSection{Interests}
-
-%------------------------------------------------
-
-\CVItem{Professional}{Software quality, Software design, Domain Specific Languages, Functional Languages}
-
-%------------------------------------------------
-
-\CVItem{Personal}{ 
- I like hiking, I do some amateur photography and I collect and cherish coins from different times and places. I am also learning how to surf
- }
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
