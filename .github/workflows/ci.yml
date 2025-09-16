@@ -34,7 +34,7 @@ jobs:
       
       - name: New Version
         run: |
-          git config user.email "juan.valdivia@carlsberggroup.com"
+          git config user.email "me@juanvaldivia.dev"
           git config user.name "jsmvaldivia"
           git add cv.pdf
           git commit -a -m "New CV version"
