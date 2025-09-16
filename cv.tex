@@ -1,173 +1,95 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wenneker Resume/CV
-% LaTeX Template
-% Version 1.1 (19/6/2016)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Frits Wenneker (http://www.howtotex.com) with extensive modifications by 
-% Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% One-page ATS-friendly resume for Juan Valdivia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[a4paper,12pt]{memoir}
 
-\documentclass[a4paper,12pt]{memoir} % Font and paper size
+% Packages and configuration
+\usepackage{XCharter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\setlist{noitemsep,nolistsep}
 
-\input{structure.tex} % Include the file specifying document layout and packages
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
 
-\userinformation{
-\begin{flushright}
-\footnotesize % Smaller font size
-\url{me@juanvaldivia.dev} \\ % Your email address
-\footnotesize (+351) 968 640 681 \\ % Your phone number
-\Sep
-\end{flushright}
-
-\aboutme{\footnotesize About Me}
-{\footnotesize
-I am a quality-driven software engineer 
-that enjoys crafting efficiently and \\
-user-friendly 
-solutions, especially as an enabler to other 
-colleagues.
- I am currently set in Lisbon, Portugal.
- }
-\Sep
-
-
-\CVSection{Skills}
-%------------------------------------------------
-\CVItem{Programming languages and others}
-{\begin{tabular}{p{0.2\textwidth}}
-\smallBlueBullet Java 
-\smallBlueBullet Go \\
-\smallBlueBullet Typescript \\
-\smallBlueBullet Agile development \\
-\smallBlueBullet Microservices \\
-\smallBlueBullet Serverless \\
-\smallBlueBullet Github Actions \\
-\smallBlueBullet AWS
-\smallBlueBullet Azure \\
-
-\end{tabular}}
-%------------------------------------------------
-
-\CVItem{Spoken languages}{
-\begin{tabular}{p{0.2\textwidth}}
-    \smallBlueBullet \textit{Portuguese} Native\\ 
-    \smallBlueBullet \textit{Spanish} Native\\
-    \smallBlueBullet \textit{English} (C2 level)\\ 
-    \smallBlueBullet \textit{French} (C1 level)\\ 
-\end{tabular}}
-
-\Sep
-
-\CVSection{Interests}
-
-%------------------------------------------------
-
-\CVItem{Professional}{
-I'm interested in topics like software quality, software design, and functional language idioms. 
-I keep up to date by attending software 
-meetups. I usually \\ pickup technical reads from books and internet articles.
-}
-
-%------------------------------------------------
-
-\CVItem{Personal}{ 
- I like hiking and doing some photography at it. I also like to collect coins from different times and places.
-}
-
-
-\vfill
-
-}
-
-%----------------------------------------------------------------------------------------
+% Commands for headings and layout
+\newcommand{\cvheading}[1]{{\Large\bfseries\color{RoyalBlue} #1} \par\vspace{.6\baselineskip}}
+\newcommand{\cvsubheading}[1]{{\large\bfseries #1} \bigbreak}
+\newcommand{\Sep}{\vspace{1em}}
+\newcommand{\SmallSep}{\vspace{0.5em}}
+\newcommand{\CVSection}[1]{{\large\textbf{#1}}\par\SmallSep}
+\newcommand{\CVItem}[2]{\textbf{\color{RoyalBlue} #1}\par\small{#2}\SmallSep}
 
 \begin{document}
 
-\userinformation % Print your information in the left column
-
-\framebreak % End of the first column
-
-\cvheading{Juan Valdivia} 
+\cvheading{Juan Valdivia}
 \cvsubheading{Software Engineer}
 
-\CVSection{Education}
-%------------------------------------------------
-\CVItem{2011 -2015, ISCTE-University Institute of Lisbon}{BS in Software Engineering and some MS classes}
+% Contact information
+\small{Lisbon, Portugal • \url{me@juanvaldivia.dev} • (+351) 968 640 681}\\
+\SmallSep
 
+% Professional summary
+\CVSection{Professional Summary}
+Seasoned software engineer and technical lead with 8+ years of experience architecting and scaling microservice‑based platforms. Specializes in Java and distributed systems, with hands‑on experience in AWS and Azure; currently learning Go and adaptable to different technology stacks. Worked alongside distributed teams to build and deploy resilient microservice ecosystems, scaling applications from three to ten markets and migrating legacy systems to cloud‑native architectures.
 \Sep
 
+% Skills
+\CVSection{Skills}
+\begin{itemize}[leftmargin=*,label={•}]
+    \item \textbf{Programming:} Java, Go, Python, TypeScript, Node.js (TypeScript)
+    \item \textbf{DevOps \& Cloud:} AWS, Azure, Serverless, GitHub Actions, Terraform
+    \item \textbf{Practices:} Agile development, Microservices architecture, API-first design
+    \item \textbf{Languages:} Portuguese (native), Spanish (native), English (C2), French (C1)
+\end{itemize}
+\Sep
+
+% Languages merged under skills
+
+% Note: Interests section removed for brevity
+
+% Education
+\CVSection{Education}
+\CVItem{2011--2015, ISCTE–University Institute of Lisbon}{BSc in Software Engineering (completed select MSc coursework)}
+\Sep
+
+% Experience
 \CVSection{Experience}
-%------------------------------------------------
-\CVItem{Jan 2019 - present, \textit{Software Engineer}, Carlsberg Group IIT}{
-\vspace{1pt}
-\textbf{Launched Cadi (Carlsberg Group's sales team application) with a multi-functional team}
-\begin{itemize}
-	\item Green-field project made available to 7 European markets
-        \item Solution design and development for several micro-services in AWS
-\end{itemize}
-\textbf{In 2022, worked in the Platform Team as one of the lead developers.}
-\begin{itemize}
-	\item Building common services with API first practices. 
-	\item Restructuring CI/CD pipelines to trunk-based branching
-	\item Refactoring older services to serve higher request demand and allow scalability.
-	\item Evangelizing \textit{innersource} practices throughout the teams
-\end{itemize}
-\textbf{As of 2023, I moved to the Carlsshop team, Carlsberg Group's flagship e-commerce platform.}
-\begin{itemize}
-	\item Security patching to the aging platform (SAP Hybris)
-	\item Drove the migration of Carlsshop to SAP Commerce Cloud
-\end{itemize}
-\textbf{Tech Lead on Carlsshop Project}
-\begin{itemize}
-	\item Spearheaded process and code quality improvements, enhancing the Carlsshop maintainability (improved support process, documented existing infrastructure and services, created basic software integration processes to ensure code quality). Developed a plan for future enhancements to reduce overall platform cost and enable MACH architecture
-        \item Started migration of microservices from Azure to AWS to have them Terraform scripted
-        \item Highly involved in the hiring process for our teams
+% New role at Bose (inserted chronologically above Carlsberg)
+\CVItem{Mar 2025–Present, \textit{Technical Lead}, Bose}{
+\begin{itemize}[leftmargin=*,label={•}]
+    \item Lead two offshore teams for Bose’s reseller portal and SAP modules. The reseller/B2B portal leverages Adobe Experience Manager (AEM) and SAP Hybris with microservices; the second team focuses on SAP ECC and CRM. Restructured development processes and provided technical guidance to improve team efficiency and quality of delivery.
 \end{itemize}
 }
 
-%------------------------------------------------
-
-\CVItem{Oct 2017 - Dec 2018, \textit{Software Engineer}, STEF-IT}{
-\textbf{Worked building and maintaining customer management tool for a French company specialized in cold chain transportation and logistics}
-\begin{itemize}
-	\item Major language version upgrade implying great rework on UI (GWT)
-	\item Corrective maintenance on search engine and SOA platform.
-	\item Taking under my responsibility new younger developers
-\end{itemize}
-}
-%------------------------------------------------
-
-\CVItem{Aug 2016 - Aug 2017, \textit{Software Engineer}, TIMWE Group}{
-\textbf{Worked on middle-ware to enhance mobile carriers and content partners' capabilities for mobile subscriptions and promotion services.}
-\begin{itemize}
-	\item Built back-office for mobile VAS\footnote{Value Added Services} runtime and did custom integrations to different AAA\footnote{Authorization,Authentication,Accounting} services. Successfully migrated over 750K users from 6 different countries to work on the new platform
-	\item Highly involved with clients to gather business and technical requirements
-
+\CVItem{Jan 2019–Dec 2024, \textit{Software Engineer}, Carlsberg Group}{
+\begin{itemize}[leftmargin=*,label={•}]
+    \item Architected and developed the back-end of CADI, a microservices-based sales-team platform on AWS Fargate. Built a Java back-end-for-front-end (BFF) and containerized services (Survey, Customer, Geolocation, Address, Order) with SQL/NoSQL databases; collaborated closely with the frontend team and scaled the platform from three markets to ten European countries.
+    \item Platform Engineering Team (2022): Collaborated with infrastructure to build reusable, API-first services; restructured CI/CD pipelines from GitFlow to trunk-based branching; refactored legacy services for scalability; evangelized inner-source practices.
+    \item Carlsshop \& Tech Lead (2023): Hardened and migrated an aging SAP Hybris platform to SAP Commerce Cloud; improved processes and code quality, documented infrastructure and services, planned MACH adoption; initiated migration of microservices from Azure to AWS with Terraform and supported team hiring.
 \end{itemize}
 }
 
-%------------------------------------------------
+\CVItem{Oct 2017–Dec 2018, \textit{Software Engineer}, STEF–IT}{
+Upgraded and maintained a customer-management tool for a French cold-chain logistics company, including a major GWT UI upgrade, search engine and SOA maintenance, and mentoring junior developers.
+}
 
-\Sep % Extra whitespace after the end of a major section
+\CVItem{Aug 2016–Aug 2017, \textit{Software Engineer}, TIMWE Group}{
+Built a back-office for mobile VAS runtime, integrated multiple services and migrated 750K users across six countries to the new platform; gathered business and technical requirements from clients.
+}
+\Sep
 
+% Side Projects
 \CVSection{Side Projects}
+\CVItem{2019, Carlsberg Group 12h Hackathon}{Top-3 finish; created a proof-of-concept solution to address a real business threat.}
 
-%------------------------------------------------
-
-\CVItem{2019, \textit{Carlsberg Group}, 12h Hackathon}{Top 3. Showcase of a solution to handle an upcoming real-life business threat.}
-
-\CVItem{2018, \textit{STEF-IT}, 24h Hackathon}{Awarded first place. Demo application in Javascript that tackled workplace safety education practices around trucks, lifters, and warehouses }
+\CVItem{2018, STEF–IT 24h Hackathon}{First place; built a JavaScript demo promoting safety around trucks, lifters and warehouses.}
 
 \end{document}

@@ -25,42 +25,18 @@
 
 \usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry} % Modify margins
 
-\usepackage{graphicx} % Required for figures
-
-\usepackage{flowfram} % Required for the multi-column layout
+% Removed flowfram package; using a single-column layout for ATS-friendly resumes
+% \usepackage{flowfram} % Required for the multi-column layout (removed)
 
 \usepackage{url} % URLs
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for custom colours
 
-\usepackage{tikz} % Required for the horizontal rule
-
 \usepackage{enumitem} % Required for modifying lists
 \setlist{noitemsep,nolistsep} % Remove spacing within and around lists
 
-\setlength{\columnsep}{\baselineskip} % Set the spacing between columns
-
-% Define the left frame (sidebar)
-\newflowframe{0.23\textwidth}{\textheight}{0pt}{0pt}[left]
-\newlength{\LeftMainSep}
-\setlength{\LeftMainSep}{0.235\textwidth}
-\addtolength{\LeftMainSep}{1\columnsep}
- 
-% Small static frame for the vertical line
-\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
- 
-% Content of the static frame with the vertical line
-\begin{staticcontents}{1}
-\hfill
-\tikz{\draw[loosely dotted,color=RoyalBlue,line width=1pt,yshift=0](0,0) -- (0,\textheight);}
-\hfill\mbox{}
-\end{staticcontents}
- 
-% Define the right frame (main body)
-\addtolength{\LeftMainSep}{1.pt}
-\addtolength{\LeftMainSep}{1\columnsep}
-\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
-
+% Removed multi-column frames and vertical rule to ensure a single-column layout.
+% \setlength{\columnsep}{\baselineskip} % Set the spacing between columns (no longer needed)
 \pagestyle{empty} % Disable all page numbering
 
 \setlength{\parindent}{0pt} % Stop paragraph indentation
@@ -69,7 +45,10 @@
 %	NEW COMMANDS
 %----------------------------------------------------------------------------------------
 
-\newcommand{\userinformation}[1]{\renewcommand{\userinformation}{#1}} % Define a new command for the CV user's information that goes into the left column
+% Define a new command for the CV user's information.
+% In the original template this redefined the macro for multi-column placement.
+% For a single-column layout we simply typeset its argument when called.
+\newcommand{\userinformation}[1]{#1}
 
 \newcommand{\cvheading}[1]{{\Large\bfseries\color{RoyalBlue} #1} \par\vspace{.6\baselineskip}} % New command for the CV heading
 \newcommand{\cvsubheading}[1]{{\large\bfseries #1} \bigbreak} % New command for the CV subheading
