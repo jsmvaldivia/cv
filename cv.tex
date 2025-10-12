@@ -33,27 +33,23 @@
 \cvsubheading{Software Engineer}
 
 % Contact information
-\small{Lisbon, Portugal • \url{me@juanvaldivia.dev} • (+351) 968 640 681}\\
+\small{Lisbon, Portugal • \url{me@juanvaldivia.dev} • (+351) 968 640 681 • \url{linkedin.com/in/juanvaldivia}}\\
 \SmallSep
 
 % Professional summary
 \CVSection{Professional Summary}
-Seasoned software engineer and technical lead with 8+ years of experience architecting and scaling microservice‑based platforms. Specializes in Java and distributed systems, with hands‑on experience in AWS and Azure; currently learning Go and adaptable to different technology stacks. Worked alongside distributed teams to build and deploy resilient microservice ecosystems, scaling applications from three to ten markets and migrating legacy systems to cloud‑native architectures.
+Experienced software engineer with 9+ years building and scaling distributed systems. Specialized in platform engineering and microservices architecture, with hands-on expertise in Java and Go for cloud-native applications. Led critical platform transformations at Carlsberg, enabling product teams to scale across 10 European markets while establishing engineering best practices. Passionate about developer experience, API design, and building resilient systems that balance innovation with operational excellence.
 \Sep
 
 % Skills
 \CVSection{Skills}
 \begin{itemize}[leftmargin=*,label={•}]
-    \item \textbf{Programming:} Java, Go, Python, Node.js (TypeScript and Javascript)
-    \item \textbf{DevOps \& Cloud:} AWS, Azure, Serverless, GitHub Actions, Terraform
-    \item \textbf{Practices:} Agile development, Microservices architecture, API-first design
+    \item \textbf{Platform Engineering:} API design, Service mesh, Developer experience, Inner-source practices
+    \item \textbf{Programming:} Java (expert), Go (serverless/Lambda), Python, TypeScript
+    \item \textbf{Cloud \& DevOps:} AWS (Lambda, ECS/Fargate, EventBridge), Azure, Terraform, GitHub Actions
     \item \textbf{Languages:} Portuguese (native), Spanish (native), English (C2), French (C1)
 \end{itemize}
 \Sep
-
-% Languages merged under skills
-
-% Note: Interests section removed for brevity
 
 % Education
 \CVSection{Education}
@@ -62,34 +58,32 @@ Seasoned software engineer and technical lead with 8+ years of experience archit
 
 % Experience
 \CVSection{Experience}
-% New role at Bose (inserted chronologically above Carlsberg)
-\CVItem{Mar 2025–Present, \textit{Technical Lead}, Bose}{
-\begin{itemize}[leftmargin=*,label={•}]
-    \item Lead two offshore teams for Bose’s reseller portal and SAP modules. The reseller/B2B portal leverages Adobe Experience Manager (AEM) and SAP Hybris with microservices; the second team focuses on SAP ECC and CRM. Restructured development processes and provided technical guidance to improve team efficiency and quality of delivery.
+% Bose - condensed
+\CVItem{Mar 2025–Present, \textit{Tech Lead}, Bose}{
+Leading two B2B teams: one focused on e-commerce platform (AEM, Hybris, microservices architecture) and another handling enterprise integrations, ERP and CRM systems. Restructuring development practices to improve delivery quality and team efficiency across distributed locations.
+}
+
+\CVItem{Jan 2019–Dec 2024, \textit{Software Engineer $\rightarrow$ Platform Engineer $\rightarrow$ Tech Lead}, Carlsberg Group}{
+\begin{itemize}[leftmargin=*,label={•},itemsep=0.3em]
+    \item \textbf{CADI Platform (2019–2021):} Architected greenfield microservices sales platform on AWS Fargate, delivering MVP in 7 months and scaling to 9 European markets within 18 months. Built event-driven backend architecture for real-time data synchronization, while implementing offline-first mobile design ensuring sales teams could operate without constant connectivity. Achieved 99.98\% availability (2 hours total downtime) while continuously adding functionality.
+    
+    \item \textbf{Platform Engineering Team (2022–2023):} 
+    Refactored legacy monolithic services into event-driven microservices, improving system reliability and migrated critical event processing workloads to Go-based serverless functions, reducing cold-start latency compared to Java implementations.\\
+    Led initiative to build reusable, API-first platform services adopted by 8 product teams while championing for innersource practices \\
+    Reengineered branch strategy from 2-week release branches to automated trunk-based CI/CD with feature flags, reducing deployment lead time from 14 days to near real-time after commit.\\ Implemented Datadog observability stack on AWS Fargate using sidecar agent containers and Java APM agent integration, enabling full metrics, logs, and trace visibility across services. 
+    
+    \item \textbf{E-commerce Tech Lead (2023–2024):} Led stabilization and modernization of a legacy B2B e-commerce platform across 6 markets, reducing over 600 security vulnerabilities to zero and improving operational reliability. Applied MACH architecture principles and IaC with Terraform. Initiated migration of containerized services from Azure to AWS to increase platform consistency and security.\\
+    Conducted technical interviews and contributed to hiring processes to strengthen the engineering team.
 \end{itemize}
 }
 
-\CVItem{Jan 2019–Dec 2024, \textit{Software Engineer}, Carlsberg Group}{
-\begin{itemize}[leftmargin=*,label={•}]
-    \item Architected and developed the back-end of CADI, a microservices-based sales-team platform on AWS Fargate. Built a Java back-end-for-front-end (BFF) and containerized services (Survey, Customer, Geolocation, Address, Order) with SQL/NoSQL databases; collaborated closely with the frontend team and scaled the platform from three markets to ten European countries.
-    \item Platform Engineering Team (2022): Collaborated with infrastructure to build reusable, API-first services; restructured CI/CD pipelines from GitFlow to trunk-based branching; refactored legacy services for scalability; evangelized inner-source practices.
-    \item Carlsshop \& Tech Lead (2023): Hardened and migrated an aging SAP Hybris platform to SAP Commerce Cloud; improved processes and code quality, documented infrastructure and services, planned MACH adoption; initiated migration of microservices from Azure to AWS with Terraform and supported team hiring.
-\end{itemize}
-}
-
-\CVItem{Oct 2017–Dec 2018, \textit{Software Engineer}, STEF–IT}{
-Upgraded and maintained a customer-management tool for a French cold-chain logistics company, including a major GWT UI upgrade, search engine and SOA maintenance, and mentoring junior developers.
+% Earlier roles - condensed to one-liners
+\CVItem{Oct 2017–Dec 2018, \textit{Software Engineer}, STEF-IT}{
+Enhanced customer management platform for a major logistics provider, modernizing GWT-based UI and SOA services to improve maintainability and performance. Mentored more junior developers.
 }
 
 \CVItem{Aug 2016–Aug 2017, \textit{Software Engineer}, TIMWE Group}{
-Built a back-office for mobile VAS runtime, integrated multiple services and migrated 750K users across six countries to the new platform; gathered business and technical requirements from clients.
+Built back-office platform for mobile VAS services, handling high-volume user data and migrating 750K accounts across 6 countries. Integrated services via HTTP, DIAMETER, and SOAP protocols, ensuring reliable interoperability between TIMWE, telecom carriers, and partners.
 }
-\Sep
-
-% Side Projects
-\CVSection{Side Projects}
-\CVItem{2019, Carlsberg Group 12h Hackathon}{Top-3 finish; created a proof-of-concept solution to address a real business threat.}
-
-\CVItem{2018, STEF–IT 24h Hackathon}{First place; built a JavaScript demo promoting safety around trucks, lifters and warehouses.}
 
 \end{document}
