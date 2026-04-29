@@ -1,43 +1,54 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Build new CV version
 
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: cv-build
+  cancel-in-progress: false
+
 jobs:
   build-cv:
-    if: (github.event.pusher.name == github.event.repository.owner.name)
     name: Build CV
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v6
 
-      - name: Remove previous version
-        run: |
-          rm -rf cv.pdf
-          
-      - name: Latex to PDF
+      - name: Compile LaTeX to PDF
         uses: xu-cheng/latex-action@v4
         with:
-         root_file: |
-           cv.tex
-      
+          root_file: cv.tex
+
+      - name: Verify PDF was created
+        run: |
+          if [ ! -f cv.pdf ]; then
+            echo "Error: cv.pdf was not generated"
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-         name: PDF
-         path: cv.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      
-      - name: New Version
+          name: CV-PDF-${{ github.run_number }}
+          path: cv.pdf
+          retention-days: 30
+
+      - name: Commit and push PDF
         run: |
           git config user.email "me@juanvaldivia.dev"
           git config user.name "jsmvaldivia"
           git add cv.pdf
-          git commit -a -m "New CV version"
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit - PDF unchanged"
+            exit 0
+          fi
+
+          git commit -m "New CV version"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
